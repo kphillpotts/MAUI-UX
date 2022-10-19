@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiUX.Pages.TransformsPage"
+             Title="TransformsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="Handle_Clicked" Text="Reset" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <Style TargetType="Slider">
+            <Setter Property="Margin" Value="20,0,20,0" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image
+            x:Name="Target"
+            HorizontalOptions="Center"
+            Opacity="{Binding Source={x:Reference OpacitySlider}, Path=Value}"
+            Rotation="{Binding Source={x:Reference RotationSlider}, Path=Value}"
+            RotationX="{Binding Source={x:Reference RotationXSlider}, Path=Value}"
+            RotationY="{Binding Source={x:Reference RotationYSlider}, Path=Value}"
+            Scale="{Binding Source={x:Reference ScaleSlider}, Path=Value}"
+            Source="dotnet_bot.png"
+            TranslationX="{Binding Source={x:Reference TranslationXSlider}, Path=Value}"
+            TranslationY="{Binding Source={x:Reference TranslationYSlider}, Path=Value}"
+            VerticalOptions="Center" />
+        <Frame
+            Grid.Row="1"
+            BackgroundColor="#EEEEEE"
+            HasShadow="true"
+            HeightRequest="200">
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="{Binding Source={x:Reference ScaleSlider}, Path=Value, StringFormat='Scale ({0:N})'}" />
+                    <Slider
+                        x:Name="ScaleSlider"
+                        Maximum="3"
+                        Minimum="0"
+                        Value="1" />
+                    <Label Text="{Binding Source={x:Reference OpacitySlider}, Path=Value, StringFormat='Opacity ({0:N})'}" />
+                    <Slider
+                        x:Name="OpacitySlider"
+                        Maximum="1"
+                        Minimum="0"
+                        Value="1" />
+                    <Label Text="{Binding Source={x:Reference TranslationXSlider}, Path=Value, StringFormat='Translation X ({0:N})'}" />
+                    <Slider
+                        x:Name="TranslationXSlider"
+                        Maximum="500"
+                        Minimum="-500"
+                        Value="0" />
+                    <Label Text="{Binding Source={x:Reference TranslationYSlider}, Path=Value, StringFormat='Translation Y ({0:N})'}" />
+                    <Slider
+                        x:Name="TranslationYSlider"
+                        Maximum="500"
+                        Minimum="-500"
+                        Value="0" />
+                    <Label Text="{Binding Source={x:Reference RotationSlider}, Path=Value, StringFormat='Rotation ({0:N})'}" />
+                    <Slider
+                        x:Name="RotationSlider"
+                        Maximum="720"
+                        Minimum="-720"
+                        Value="0" />
+                    <Label Text="{Binding Source={x:Reference RotationXSlider}, Path=Value, StringFormat='Rotation X ({0:N})'}" />
+                    <Slider
+                        x:Name="RotationXSlider"
+                        Maximum="720"
+                        Minimum="-720"
+                        Value="0" />
+                    <Label Text="{Binding Source={x:Reference RotationYSlider}, Path=Value, StringFormat='Rotation Y ({0:N})'}" />
+                    <Slider
+                        x:Name="RotationYSlider"
+                        Maximum="720"
+                        Minimum="-720"
+                        Value="0" />
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+    </Grid>
+
+</ContentPage>
