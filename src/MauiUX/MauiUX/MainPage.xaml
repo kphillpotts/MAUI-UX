@@ -11,6 +11,10 @@
 
             <Button Text="Transforms" Clicked="OnTransformsClicked" />
 
+            <Button Text="Page Animation" Clicked="Button_Clicked" />
+
+            <Button Text="Colection Page" Clicked="Button_Clicked_1" />
+
         </VerticalStackLayout>
     </ScrollView>
 

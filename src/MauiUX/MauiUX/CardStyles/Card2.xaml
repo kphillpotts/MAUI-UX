@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiUX.CardStyles.Card2">
+    <Style TargetType="Label" x:Key="HeaderText">
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+    <Style TargetType="Label" x:Key="SubHeaderText">
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+    <Style TargetType="Label" x:Key="BodyText">
+        <Setter Property="FontSize" Value="10"/>
+    </Style>
+
+
+
+
+</ResourceDictionary>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiUX.Pages.CollectionPage"
+             BackgroundColor="LightGray"
+             Title="CollectionPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style TargetType="Label" x:Key="HeaderText">
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            <Style TargetType="Label" x:Key="SubHeaderText">
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+            <Style TargetType="Label" x:Key="BodyText">
+                <Setter Property="FontSize" Value="10"/>
+            </Style>
+
+            <DataTemplate x:Key="Card1">
+                <ContentView Padding="20,10,20,10" >
+                <Border BackgroundColor="White" 
+                        
+                StrokeShape="RoundRectangle 8"
+                StrokeThickness="1"
+                HeightRequest="100">
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                        Radius="20"
+                        Offset="1,10"
+                        Opacity=".1"/>
+                    </Border.Shadow>
+
+                    <Grid ColumnDefinitions="100, *" RowDefinitions="100">
+
+                            <Rectangle WidthRequest="10" BackgroundColor="{Binding AccentColor}"
+                                       Grid.Column="1"
+                                       HorizontalOptions="End"/>
+
+                            <Image Source="{Binding AvatarImage}" Aspect="AspectFill"
+                               WidthRequest="80" HeightRequest="80">
+                            <Image.Clip>
+                                    <RoundRectangleGeometry CornerRadius="4" Rect="0,0,80,80"/>
+                                    <!--<EllipseGeometry RadiusX="25" RadiusY="25" Center="25,25"/>-->
+                            </Image.Clip>
+                        </Image>
+
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label Text="{Binding Title}" Style="{StaticResource HeaderText}"/>
+                            <Label Text="{Binding Description}" Style="{StaticResource BodyText}"/>
+                        </VerticalStackLayout>
+
+                    </Grid>
+
+                </Border>
+                </ContentView>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Card2">
+                <ContentView Padding="20,10,20,10" >
+                    <Border StrokeShape="Rectangle"
+                StrokeThickness="1">
+                        <Border.Shadow>
+                            <Shadow Brush="Black"
+                        Radius="20"
+                        Offset="1,10"
+                        Opacity=".1"/>
+                        </Border.Shadow>
+
+                        <Grid ColumnDefinitions="*" RowDefinitions="200,AUTO">
+
+                            <Image Source="{Binding Image}" Aspect="AspectFill">
+                            </Image>
+                            <Rectangle BackgroundColor="White" Grid.Row="1"/>
+                            <VerticalStackLayout Grid.Row="1" Margin="20">
+                                <Label Text="{Binding Title}"  Style="{StaticResource HeaderText}" />
+                                <Label Text="{Binding Description}"
+                           MaxLines="2"  Style="{StaticResource BodyText}"/>
+                            </VerticalStackLayout>
+
+                        </Grid>
+                    </Border>
+                </ContentView>
+
+            </DataTemplate>
+
+            <DataTemplate x:Key="GradientCard">
+                <ContentView Padding="20,10,20,10" >
+                    <Border StrokeShape="Rectangle"
+                StrokeThickness="1">
+                        <Border.Shadow>
+                            <Shadow Brush="Black"
+                        Radius="20"
+                        Offset="1,10"
+                        Opacity=".1"/>
+                        </Border.Shadow>
+
+                        <Grid ColumnDefinitions="*" RowDefinitions="100,AUTO">
+
+                            <Image Source="{Binding Image}" Aspect="AspectFill"
+                                   Grid.RowSpan="2">
+                            </Image>
+                            <Rectangle Grid.Row="1">
+                                <Rectangle.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="Transparent" Offset="0.0" />
+                                        <GradientStop Color="#BB000000" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Rectangle.Background>
+                            </Rectangle>
+                            <VerticalStackLayout Grid.Row="1" Margin="20,0,20,20"
+                                                 VerticalOptions="End">
+                                <Label Text="{Binding Title}" TextColor="White"  Style="{StaticResource HeaderText}" />
+                                <Label Text="{Binding Description}" TextColor="White"
+                           MaxLines="2"  Style="{StaticResource BodyText}"/>
+                            </VerticalStackLayout>
+
+                        </Grid>
+                    </Border>
+                </ContentView>
+
+            </DataTemplate>
+
+
+            <DataTemplate x:Key="Card3">
+                <ContentView Padding="20,10,20,10" HeightRequest="400" WidthRequest="300" >
+                    <Border StrokeShape="RoundRectangle 8">
+
+                        <Grid ColumnDefinitions="*" RowDefinitions="200,200">
+                            <Image Source="{Binding Image}" Aspect="AspectFill">
+                            </Image>
+
+
+                            <Rectangle BackgroundColor="White" Grid.Row="1"/>
+
+                            <Rectangle Grid.Row="1" VerticalOptions="Start" HeightRequest="10">
+                                <Rectangle.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="#33000000" Offset="0.0" />
+                                        <GradientStop Color="Transparent" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Rectangle.Background>
+                            </Rectangle>
+
+
+                            <VerticalStackLayout Grid.Row="1" Margin="20,70,20,20"
+                                                 HorizontalOptions="Center">
+                                <Label Text="{Binding Title}" HorizontalOptions="Center" Style="{StaticResource HeaderText}" />
+                                <Label Text="{Binding Description}"
+                           MaxLines="2"  Style="{StaticResource BodyText}"/>
+                            </VerticalStackLayout>
+
+                            <Border WidthRequest="100" HeightRequest="100"
+                                    Stroke="White" StrokeShape="Ellipse 50,50"
+                                    VerticalOptions="Start" Margin="0,150,0,0"
+                                    Grid.Row="0" Grid.RowSpan="2"
+                                    StrokeThickness="10">
+                                
+                                <Image Source="{Binding AvatarImage}" Aspect="AspectFill"
+                                   >
+                                    <Image.Clip>
+                                        <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
+                                    </Image.Clip>
+                                </Image>
+                            </Border>
+
+                        </Grid>
+
+                    </Border>
+                </ContentView>
+
+            </DataTemplate>
+
+            <DataTemplate x:Key="ColorCard">
+                <ContentView Padding="20,10,20,10" >
+                    <Border BackgroundColor="{Binding AccentColor}" 
+                        
+                StrokeShape="RoundRectangle 16"
+                StrokeThickness="0"
+                HeightRequest="150">
+                        <Border.Shadow>
+                            <Shadow Brush="{Binding AccentColor}"
+                        Radius="20"
+                        Offset="0,10"
+                        Opacity=".5"/>
+                        </Border.Shadow>
+
+                        <Grid ColumnDefinitions="120, *" RowDefinitions="150">
+
+                            <Border 
+                                    Stroke="#55FFFFFF" StrokeShape="Ellipse 50,50"
+                                    VerticalOptions="Center" 
+                                WidthRequest="100" HeightRequest="100"
+                                   
+                                    StrokeThickness="10">
+
+                                <Image Source="{Binding AvatarImage}" Aspect="AspectFill"
+                                   >
+                                    <Image.Clip>
+                                        <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
+                                    </Image.Clip>
+                                </Image>
+                            </Border>
+
+
+
+                            
+
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label Text="{Binding Title}" Style="{StaticResource HeaderText}" TextColor="White"/>
+                                <Label Text="{Binding Description}" Style="{StaticResource BodyText}" TextColor="White"/>
+                            </VerticalStackLayout>
+
+                            <Grid.Background>
+                                <RadialGradientBrush Center="1.0,1.0">
+                                    <GradientStop Color="#AAFFFFFF"
+                  Offset="0.1" />
+                                    <GradientStop Color="Transparent"
+                  Offset="1.0" />
+                                </RadialGradientBrush>
+                            </Grid.Background>
+                            
+                            <!--<Ellipse BackgroundColor="Red" WidthRequest="100" HeightRequest="100"
+                                     
+                                     Grid.Column="1"
+                                     VerticalOptions="End" HorizontalOptions="End"></Ellipse>-->
+                            
+                        </Grid>
+
+                    </Border>
+                </ContentView>
+
+            </DataTemplate>
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="*,AUTO">
+    <CollectionView x:Name="myCollection" ItemTemplate="{StaticResource Card1}"
+                    
+                    
+                    />
+        <HorizontalStackLayout Grid.Row="1">
+        <Button Text="Card 1" Clicked="Button_Clicked"></Button>
+        <Button Text="Card 2" Clicked="Button_Clicked_1"></Button>
+            <Button Text="Card 3" Clicked="Button_Clicked_2"></Button>
+            <Button Text="Card 4" Clicked="Button_Clicked_3"></Button>
+            <Button Text="Card 5" Clicked="Button_Clicked_4"></Button>
+        </HorizontalStackLayout>
+
+    </Grid>
+
+
+</ContentPage>

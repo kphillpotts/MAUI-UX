@@ -11,5 +11,15 @@ public partial class MainPage : ContentPage
 	{
         await Navigation.PushAsync(new Pages.TransformsPage());
 	}
+
+	private async void Button_Clicked(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new Pages.AnimationPage());
+	}
+
+	private async void Button_Clicked_1(object sender, EventArgs e)
+	{
+        await Navigation.PushAsync(new Pages.CollectionPage());
+    }
 }
 

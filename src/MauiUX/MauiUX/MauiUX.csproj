@@ -49,7 +49,46 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\Landscape1_Image.jpg" />
+	  <None Remove="Resources\Images\Landscape2_Image.jpg" />
+	  <None Remove="Resources\Images\Landscape3_Image.jpg" />
+	  <None Remove="Resources\Images\Landscape4_Image.jpg" />
+	  <None Remove="Resources\Images\Landscape5_Image.jpg" />
+	  <None Remove="Resources\Images\Landscape6_Image.jpg" />
+	  <None Remove="Resources\Images\mugello.jpg" />
+	  <None Remove="Resources\Images\Person11_Image.jpg" />
+	  <None Remove="Resources\Images\Person35_Image.jpg" />
+	  <None Remove="Resources\Images\Person40_Image.jpg" />
+	  <None Remove="Resources\Images\Person55_Image.jpg" />
+	  <None Remove="Resources\Images\Person72_Image.jpg" />
+	  <None Remove="Resources\Images\Person73_Image.jpg" />
+	  <None Remove="Resources\Images\pexels_roberto_nickson_2559941.jpg" />
+	  <None Remove="Resources\Images\pexels_tatiana_syrikova_3934023.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="CardStyles\Card1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="CardStyles\Card2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AnimationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\CollectionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\TransformsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\DescriptionPane.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ExpandBar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Title.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
