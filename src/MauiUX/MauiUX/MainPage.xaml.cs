@@ -21,5 +21,10 @@ public partial class MainPage : ContentPage
 	{
         await Navigation.PushAsync(new Pages.CollectionPage());
     }
+
+    private async void Button_Clicked_2(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Pages.SkiaPage());
+    }
 }
 

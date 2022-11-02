@@ -16,6 +16,9 @@
             <Color x:Key="SubHeaderBackground">#d3d3d3</Color>
             <Color x:Key="SubHeaderText">Gray</Color>
 
+            <!--Guage Gradients-->
+            <Color x:Key="GaugeGradientStartColor">#99C2FF</Color>
+            <Color x:Key="GaugeGradientEndColor">#FB7D80</Color>
 
         </ResourceDictionary>
     </Application.Resources>

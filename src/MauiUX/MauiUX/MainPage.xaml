@@ -15,6 +15,8 @@
 
             <Button Text="Colection Page" Clicked="Button_Clicked_1" />
 
+            <Button Text="Skia Page" Clicked="Button_Clicked_2" />
+
         </VerticalStackLayout>
     </ScrollView>
 
