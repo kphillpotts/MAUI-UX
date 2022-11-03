@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiUX.Pages.AnimationPage"
-             xmlns:views = "clr-namespace:MauiUX.Views"
-             Title="AnimationPage"
-             BackgroundColor="#181818">
-    
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="AUTO"/>
-        </Grid.RowDefinitions>
-
-        <Image x:Name="MainImage" Grid.Row="0" Grid.RowSpan="2" 
-               VerticalOptions="Start" HorizontalOptions="Start"
-               Source="mugello.jpg" Aspect="AspectFill">
-            <Image.GestureRecognizers>
-                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Handle_Tapped"/>
-            </Image.GestureRecognizers>
-        </Image>
-
-        <views:ExpandBar x:Name="ExpandBar" VerticalOptions="End" Grid.Row="1" Padding="0" TranslationY="1"/>
-
-        <views:DescriptionPane x:Name="BottomFrame" Text="The Mugello is a historic region and valley in northern Tuscany, in Italy. It is located to the north of the city of Florence and consists of the northernmost portion of the Metropolitan City of Florence.  It is connected to the separate Santerno river valley by the Futa Pass." Grid.Row="1" IsVisible="true" VerticalOptions="End"/>
-
-        <views:Title x:Name="Title" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Start" 
-               Margin="0,40,0,0"/>
-    </Grid>
-</ContentPage>
+<ContentPage
+    x:Class="MauiUX.Pages.AnimationPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="AnimationPage" />

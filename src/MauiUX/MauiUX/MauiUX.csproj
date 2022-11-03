@@ -35,7 +35,8 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\hackdaysplash.svg" Color="#FFFFFF" BaseSize="600,600" />
+		<!--<MauiSplashScreen Include="Resources\Splash\hackdaysplash.svg" Color="#FFFFFF" BaseSize="512,512" />-->
+		<MauiSplashScreen Include="Resources\Splash\sad_ninja_cat.png" Color="#FFFFFF" BaseSize="512,512" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -51,6 +52,8 @@
 	<ItemGroup>
 	  <None Remove="Images\Heat.svg" />
 	  <None Remove="Images\Snowflake.svg" />
+	  <None Remove="Resources\Fonts\Alegreya-VariableFont_wght.ttf" />
+	  <None Remove="Resources\Fonts\SourceSansPro-Regular.ttf" />
 	  <None Remove="Resources\Images\Landscape1_Image.jpg" />
 	  <None Remove="Resources\Images\Landscape2_Image.jpg" />
 	  <None Remove="Resources\Images\Landscape3_Image.jpg" />
@@ -67,10 +70,14 @@
 	  <None Remove="Resources\Images\pexels_roberto_nickson_2559941.jpg" />
 	  <None Remove="Resources\Images\pexels_tatiana_syrikova_3934023.jpg" />
 	  <None Remove="Resources\Images\Thumb.png" />
+	  <None Remove="Resources\Raw\cat_playing_animation.json" />
+	  <None Remove="Resources\Raw\sent_successfully_plane.json" />
 	  <None Remove="Resources\Splash\HackDaySplash.svg" />
+	  <None Remove="Resources\Splash\sad_ninja_cat.png" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
 	  <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.3" />
 	  <PackageReference Include="Svg.Skia" Version="0.6.0-preview2" />
 	</ItemGroup>
@@ -88,22 +95,19 @@
 	  <MauiXaml Update="Pages\CollectionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\FontsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\LottiePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\SkiaPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\TransformsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\DescriptionPane.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\ExpandBar.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\GuageControl.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Title.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiUX.Pages.LottiePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+    Title="LottiePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BodyText" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="20" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout VerticalOptions="Center">
+
+        <skia:SKLottieView
+            HeightRequest="200"
+            HorizontalOptions="Center"
+            RepeatCount="-1"
+            RepeatMode="Restart"
+            Source="cat_playing_animation.json" />
+
+        <Label Style="{StaticResource BodyText}" Text="Please be patient as I plot my next evil move..." />
+
+    </VerticalStackLayout>
+
+</ContentPage>

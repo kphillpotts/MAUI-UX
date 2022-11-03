@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:MauiUX.Views"
-             x:Class="MauiUX.Pages.SkiaPage"
-             Background="#D6D7E3"
-             Title="SkiaPage">
+<ContentPage
+    x:Class="MauiUX.Pages.SkiaPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MauiUX.Views"
+    Title="SkiaPage"
+    Background="#D6D7E3">
     <VerticalStackLayout>
-        <views:GuageControl HeightRequest="150" Margin="20"/>
+        <views:GuageControl Margin="20" HeightRequest="150" />
     </VerticalStackLayout>
 </ContentPage>

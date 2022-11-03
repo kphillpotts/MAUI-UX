@@ -1,4 +1,3 @@
-using MauiUX.Effects;
 using SkiaSharp;
 using Svg.Skia;
 using SkiaSharp.Views.Maui;
