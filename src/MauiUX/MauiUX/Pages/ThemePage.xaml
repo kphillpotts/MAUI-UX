@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiUX.Pages.ThemePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ThemePage"
+    BackgroundColor="{AppThemeBinding Light='#EEEEEE',
+                                      Dark='#333333'}">
+
+    <ContentPage.Resources>
+        <Style x:Key="LightThemeStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="Rotation" Value="0" />
+            <Setter Property="FontFamily" Value="Alegreya" />
+        </Style>
+
+        <Style x:Key="DarkThemeStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="Rotation" Value="10" />
+            <Setter Property="FontFamily" Value="SourceSansPro" />
+        </Style>
+
+    </ContentPage.Resources>
+
+    <Grid>
+
+        <VerticalStackLayout VerticalOptions="Center">
+            <Image
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                Source="{AppThemeBinding Light=sun.png,
+                                         Dark=moon.png}"
+                VerticalOptions="Center"
+                WidthRequest="200" />
+            <Label
+                Margin="20"
+                HorizontalOptions="Center"
+                Style="{AppThemeBinding Light={StaticResource LightThemeStyle},
+                                        Dark={StaticResource DarkThemeStyle}}"
+                Text="{AppThemeBinding Light='Good Morning',
+                                       Dark='Good Night'}" />
+
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout
+            Margin="10"
+            HorizontalOptions="Center"
+            Spacing="10"
+            VerticalOptions="End">
+            <Button
+                x:Name="LightThemeButton"
+                Clicked="LightThemeButton_Clicked"
+                Text="Light" />
+            <Button
+                x:Name="DarkThemeButton"
+                Clicked="DarkThemeButton_Clicked"
+                Text="Dark" />
+            <Button
+                x:Name="SystemThemeButton"
+                Clicked="SystemThemeButton_Clicked"
+                Text="System" />
+        </HorizontalStackLayout>
+
+    </Grid>
+
+
+
+</ContentPage>

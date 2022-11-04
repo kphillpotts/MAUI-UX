@@ -31,5 +31,11 @@ public partial class MainPage : ContentPage
     {
         await Navigation.PushAsync(new Pages.LottiePage());
     }
+
+    private async void Button_Clicked_Themes(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Pages.ThemePage());
+    }
+
 }
 

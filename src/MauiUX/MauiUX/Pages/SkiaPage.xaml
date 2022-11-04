@@ -6,6 +6,19 @@
     xmlns:views="clr-namespace:MauiUX.Views"
     Title="SkiaPage"
     Background="#D6D7E3">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="LightText">#d3d3d3</Color>
+            <Color x:Key="DarkBackground">#181818</Color>
+            <Color x:Key="HeaderBackground">#F44336</Color>
+            <Color x:Key="SubHeaderBackground">#d3d3d3</Color>
+            <Color x:Key="SubHeaderText">Gray</Color>
+
+            <Color x:Key="GaugeGradientStartColor">#99C2FF</Color>
+            <Color x:Key="GaugeGradientEndColor">#FB7D80</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <VerticalStackLayout>
         <views:GuageControl Margin="20" HeightRequest="150" />
     </VerticalStackLayout>

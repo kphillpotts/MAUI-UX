@@ -1,25 +1,17 @@
-﻿<?xml version = "1.0" encoding = "UTF-8" ?>
-<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MauiUX"
-             x:Class="MauiUX.App">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application
+    x:Class="MauiUX.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiUX">
+    
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-
-            <Color x:Key="LightText">#d3d3d3</Color>
-            <Color x:Key="DarkBackground">#181818</Color>
-            <Color x:Key="HeaderBackground">#F44336</Color>
-            <Color x:Key="SubHeaderBackground">#d3d3d3</Color>
-            <Color x:Key="SubHeaderText">Gray</Color>
-
-            <!--Guage Gradients-->
-            <Color x:Key="GaugeGradientStartColor">#99C2FF</Color>
-            <Color x:Key="GaugeGradientEndColor">#FB7D80</Color>
-
         </ResourceDictionary>
     </Application.Resources>
+    
 </Application>
