@@ -208,7 +208,6 @@
 
             </DataTemplate>
 
-
             <DataTemplate x:Key="Card5">
                 <ContentView Padding="20,10,20,10">
                     <Border
