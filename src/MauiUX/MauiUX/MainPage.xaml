@@ -10,17 +10,17 @@
             Spacing="25"
             VerticalOptions="Center">
 
-            <Button Clicked="OnTransformsClicked" Text="Transforms" />
+            <Button Clicked="TransformsPage_Clicked" Text="Transforms" />
 
-            <Button Clicked="Button_Clicked" Text="Fonts" />
+            <Button Clicked="FontsPage_Clicked" Text="Fonts" />
 
-            <Button Clicked="Button_Clicked_Themes" Text="Themes" />
+            <Button Clicked="ThemPage_Clicked" Text="Themes" />
 
-            <Button Clicked="Button_Clicked_1" Text="Colection Page" />
+            <Button Clicked="CollectionPage_Clicked" Text="Colection Page" />
 
-            <Button Clicked="Button_Clicked_2" Text="Skia Page" />
+            <Button Clicked="SkiaPage_Clicked" Text="Skia Page" />
 
-            <Button Clicked="Button_Clicked_3" Text="lottie Page" />
+            <Button Clicked="LottiePage_Clicked" Text="lottie Page" />
 
         </VerticalStackLayout>
     </ScrollView>

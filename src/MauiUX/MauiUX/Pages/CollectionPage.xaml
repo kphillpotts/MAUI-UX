@@ -35,13 +35,11 @@
                         </Border.Shadow>
 
                         <Grid ColumnDefinitions="100, *" RowDefinitions="100">
-
                             <Rectangle
                                 Grid.Column="1"
                                 BackgroundColor="{Binding AccentColor}"
                                 HorizontalOptions="End"
                                 WidthRequest="10" />
-
                             <Image
                                 Aspect="AspectFill"
                                 HeightRequest="80"
@@ -57,9 +55,7 @@
                                 <Label Style="{StaticResource HeaderText}" Text="{Binding Title}" />
                                 <Label Style="{StaticResource BodyText}" Text="{Binding Description}" />
                             </VerticalStackLayout>
-
                         </Grid>
-
                     </Border>
                 </ContentView>
             </DataTemplate>
@@ -76,7 +72,6 @@
                         </Border.Shadow>
 
                         <Grid ColumnDefinitions="*" RowDefinitions="200,AUTO">
-
                             <Image Aspect="AspectFill" Source="{Binding Image}" />
                             <Rectangle Grid.Row="1" BackgroundColor="White" />
                             <VerticalStackLayout Grid.Row="1" Margin="20">
@@ -86,59 +81,10 @@
                                     Style="{StaticResource BodyText}"
                                     Text="{Binding Description}" />
                             </VerticalStackLayout>
-
                         </Grid>
                     </Border>
                 </ContentView>
-
             </DataTemplate>
-
-            <DataTemplate x:Key="GradientCard">
-                <ContentView Padding="20,10,20,10">
-                    <Border StrokeShape="Rectangle" StrokeThickness="1">
-                        <Border.Shadow>
-                            <Shadow
-                                Brush="Black"
-                                Opacity=".1"
-                                Radius="20"
-                                Offset="1,10" />
-                        </Border.Shadow>
-
-                        <Grid ColumnDefinitions="*" RowDefinitions="100,AUTO">
-
-                            <Image
-                                Grid.RowSpan="2"
-                                Aspect="AspectFill"
-                                Source="{Binding Image}" />
-                            <Rectangle Grid.Row="1">
-                                <Rectangle.Background>
-                                    <LinearGradientBrush EndPoint="0,1">
-                                        <GradientStop Offset="0.0" Color="Transparent" />
-                                        <GradientStop Offset="1.0" Color="#BB000000" />
-                                    </LinearGradientBrush>
-                                </Rectangle.Background>
-                            </Rectangle>
-                            <VerticalStackLayout
-                                Grid.Row="1"
-                                Margin="20,0,20,20"
-                                VerticalOptions="End">
-                                <Label
-                                    Style="{StaticResource HeaderText}"
-                                    Text="{Binding Title}"
-                                    TextColor="White" />
-                                <Label
-                                    MaxLines="2"
-                                    Style="{StaticResource BodyText}"
-                                    Text="{Binding Description}"
-                                    TextColor="White" />
-                            </VerticalStackLayout>
-
-                        </Grid>
-                    </Border>
-                </ContentView>
-
-            </DataTemplate>
-
 
             <DataTemplate x:Key="Card3">
                 <ContentView
@@ -146,13 +92,9 @@
                     HeightRequest="400"
                     WidthRequest="300">
                     <Border StrokeShape="RoundRectangle 8">
-
                         <Grid ColumnDefinitions="*" RowDefinitions="200,200">
                             <Image Aspect="AspectFill" Source="{Binding Image}" />
-
-
                             <Rectangle Grid.Row="1" BackgroundColor="White" />
-
                             <Rectangle
                                 Grid.Row="1"
                                 HeightRequest="10"
@@ -164,8 +106,6 @@
                                     </LinearGradientBrush>
                                 </Rectangle.Background>
                             </Rectangle>
-
-
                             <VerticalStackLayout
                                 Grid.Row="1"
                                 Margin="20,70,20,20"
@@ -190,7 +130,6 @@
                                 StrokeThickness="10"
                                 VerticalOptions="Start"
                                 WidthRequest="100">
-
                                 <Image Aspect="AspectFill" Source="{Binding AvatarImage}">
                                     <Image.Clip>
                                         <EllipseGeometry
@@ -200,15 +139,77 @@
                                     </Image.Clip>
                                 </Image>
                             </Border>
-
                         </Grid>
-
                     </Border>
                 </ContentView>
 
             </DataTemplate>
 
-            <DataTemplate x:Key="ColorCard">
+            <DataTemplate x:Key="Card4">
+                <ContentView Padding="20,10,20,10">
+                    <Border StrokeShape="Rectangle" StrokeThickness="1">
+                        <Border.Shadow>
+                            <Shadow
+                                Brush="Black"
+                                Opacity=".1"
+                                Radius="20"
+                                Offset="1,10" />
+                        </Border.Shadow>
+
+                        <Grid ColumnDefinitions="*" RowDefinitions="150,75">
+
+                            <Image
+                                Grid.RowSpan="2"
+                                Aspect="AspectFill"
+                                Source="{Binding Image}" />
+                            <Rectangle Grid.Row="1">
+                                <Rectangle.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Offset="0.0" Color="Transparent" />
+                                        <GradientStop Offset="1.0" Color="#BB000000" />
+                                    </LinearGradientBrush>
+                                </Rectangle.Background>
+                            </Rectangle>
+
+                            <Grid
+                                Grid.Row="1"
+                                ColumnDefinitions="75, *"
+                                ColumnSpacing="15">
+                                <Image
+                                    Aspect="AspectFill"
+                                    HeightRequest="50"
+                                    Source="{Binding AvatarImage}"
+                                    WidthRequest="50">
+                                    <Image.Clip>
+                                        <!--<RoundRectangleGeometry CornerRadius="4" Rect="0,0,80,80" />-->
+                                        <EllipseGeometry
+                                            Center="25,25"
+                                            RadiusX="25"
+                                            RadiusY="25" />
+                                    </Image.Clip>
+                                </Image>
+
+                                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                                    <Label
+                                        Style="{StaticResource HeaderText}"
+                                        Text="{Binding Title}"
+                                        TextColor="White" />
+                                    <Label
+                                        MaxLines="2"
+                                        Style="{StaticResource BodyText}"
+                                        Text="{Binding Description}"
+                                        TextColor="White" />
+                                </VerticalStackLayout>
+                            </Grid>
+
+                        </Grid>
+                    </Border>
+                </ContentView>
+
+            </DataTemplate>
+
+
+            <DataTemplate x:Key="Card5">
                 <ContentView Padding="20,10,20,10">
                     <Border
                         BackgroundColor="{Binding AccentColor}"
@@ -224,7 +225,6 @@
                         </Border.Shadow>
 
                         <Grid ColumnDefinitions="120, *" RowDefinitions="150">
-
                             <Border
                                 HeightRequest="100"
                                 Stroke="#55FFFFFF"
@@ -232,7 +232,6 @@
                                 StrokeThickness="10"
                                 VerticalOptions="Center"
                                 WidthRequest="100">
-
                                 <Image Aspect="AspectFill" Source="{Binding AvatarImage}">
                                     <Image.Clip>
                                         <EllipseGeometry
@@ -242,11 +241,6 @@
                                     </Image.Clip>
                                 </Image>
                             </Border>
-
-
-
-
-
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
                                 <Label
                                     Style="{StaticResource HeaderText}"
@@ -264,20 +258,10 @@
                                     <GradientStop Offset="1.0" Color="Transparent" />
                                 </RadialGradientBrush>
                             </Grid.Background>
-
-                            <!--<Ellipse BackgroundColor="Red" WidthRequest="100" HeightRequest="100"
-
-                                     Grid.Column="1"
-                                     VerticalOptions="End" HorizontalOptions="End"></Ellipse>-->
-
                         </Grid>
-
                     </Border>
                 </ContentView>
-
             </DataTemplate>
-
-
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -288,11 +272,11 @@
             Margin="5"
             HorizontalOptions="Center"
             Spacing="5">
-            <Button Clicked="Button_Clicked" Text="Card 1" />
-            <Button Clicked="Button_Clicked_1" Text="Card 2" />
-            <Button Clicked="Button_Clicked_2" Text="Card 3" />
-            <Button Clicked="Button_Clicked_3" Text="Card 4" />
-            <Button Clicked="Button_Clicked_4" Text="Card 5" />
+            <Button Clicked="Card1_Clicked" Text="Card 1" />
+            <Button Clicked="Card2_Clicked" Text="Card 2" />
+            <Button Clicked="Card3_Clicked" Text="Card 3" />
+            <Button Clicked="Card4_Clicked" Text="Card 4" />
+            <Button Clicked="Card5_Clicked" Text="Card 5" />
         </HorizontalStackLayout>
 
     </Grid>
